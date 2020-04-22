@@ -1,5 +1,4 @@
-# your code goes here
-
+require 'pry'
 class Person
     attr_accessor :bank_account, :happiness, :hygiene
     attr_reader :name 
@@ -40,7 +39,6 @@ class Person
             false
         end
     end
-
     def clean?
         if @hygiene > 7
             true
@@ -48,17 +46,25 @@ class Person
             false
         end
     end
-
     def get_paid (salary)
         @bank_account += salary
         return "all about the benjamins"
     end
-
     def take_bath
         @hygiene += 4
         self.hygiene=@hygiene
         return "♪ Rub-a-dub just relaxing in the tub ♫"
     end
-
-
+    def work_out
+        @happiness += 2
+        self.happiness=@happiness
+        @hygiene -= 3
+        self.hygiene=@hygiene
+        return "♪ another one bites the dust ♫"
+    end
+    def call_friend (friend)
+        self.happiness += 3
+        friend.happiness += 3
+        return "Hi #{friend.name}! It's #{self.name}. How are you?"
+    end
 end
