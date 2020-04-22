@@ -50,8 +50,15 @@ class Person
         return "all about the benjamins"
     end
     def take_bath
-        @hygiene += 4
-        hygiene=(@hygiene)
+        self.hygiene=(@hygiene + 4)
+        # binding.pry
         return "♪ Rub-a-dub just relaxing in the tub ♫"
     end
+
+    # def work_out
+    #     @happiness += 2
+    #     @hygiene -= 3
+    #     return "♪ another one bites the dust ♫"
+    # end
+    # binding.pry
 end
