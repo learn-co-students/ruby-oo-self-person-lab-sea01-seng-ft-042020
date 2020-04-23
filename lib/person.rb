@@ -67,4 +67,24 @@ class Person
         friend.happiness += 3
         return "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
+
+    def start_conversation (conversationalist, topic)
+
+        if topic == "politics"
+            self.happiness -= 2
+            conversationalist.happiness -= 2
+            return "blah blah partisan blah lobbyist"
+
+        elsif topic == "weather"
+            self.happiness += 1
+            conversationalist.happiness +=1
+            return "blah blah sun blah rain"
+        else
+            return "blah blah blah blah blah"
+        end
+
+    end
 end
+
+
+
